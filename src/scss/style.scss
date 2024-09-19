@@ -1,9 +1,40 @@
 $font-inter: "Inter", sans-serif;
 $body-color: #FFFFFF;
+$purple-color: #6C5CE7;
 
-$body-color: blue;
 body {
+
     font-family: $font-inter !important;
-    color: $body-color;
 }
 
+header {
+    margin-top: 30px;
+    color: $purple-color ;
+
+    a, ul {
+        text-decoration: none;
+        color: inherit; // This ensures the color is inherited from the header.
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .How-header :hover {
+        color: darken( black, 10%); 
+    }
+    button {
+        text-decoration: none;
+        color: $body-color; // This ensures the color is inherited from the header.
+        font-size: 24px;
+        font-weight: 700;
+        background: #2D3436;
+        border-radius: 999px;
+        padding: 8px 16px 8px 16px;
+        border: none;
+
+    }
+  
+
+
+
+
+}

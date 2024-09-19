@@ -1,6 +1,29 @@
 body {
   font-family: "Inter", sans-serif !important;
-  color: blue;
+}
+
+header {
+  margin-top: 30px;
+  color: #6C5CE7;
+}
+header a, header ul {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 400;
+}
+header .How-header :hover {
+  color: black;
+}
+header button {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  background: #2D3436;
+  border-radius: 999px;
+  padding: 8px 16px 8px 16px;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
