@@ -14,7 +14,7 @@
   "devDependencies": {
     "concurrently": "^9.0.1",
     "lite-server": "^2.6.1",
-    "sass": "^1.79.1"
+    "sass": "^1.79.2"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"

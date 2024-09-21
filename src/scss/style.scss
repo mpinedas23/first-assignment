@@ -1,6 +1,13 @@
 $font-inter: "Inter", sans-serif;
 $body-color: #FFFFFF;
 $purple-color: #6C5CE7;
+$yellow-color: #FDCB6E;
+$black-color: #2D3436;
+$pink-highlight-color:#E84493;
+$green-highlight-color:#78C9B3;
+$red-color:#FF7675;
+
+
 
 body {
 
@@ -8,33 +15,186 @@ body {
 }
 
 header {
-    margin-top: 30px;
-    color: $purple-color ;
-
+    .container {
+        padding-left: 40px;  
+        padding-right: 40px; 
+        padding-top: 0;
+    }
+    a {
+        font-weight: bold;
+    }
     a, ul {
         text-decoration: none;
-        color: inherit; // This ensures the color is inherited from the header.
         font-size: 18px;
         font-weight: 400;
     }
 
-    .How-header :hover {
-        color: darken( black, 10%); 
+    .nav-link {
+        color: $purple-color !important;
+        position: relative;
+        padding: 0 10px;
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.2s ease;
     }
+   
+    .nav-link:hover {
+        color: black !important;
+        font-weight: bold; 
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center; // Vertically aligns items
+    }
+
+    .dot-svg {
+        width: 20px;  
+        height: 20px;
+        display: block;  
+        fill: $yellow-color;
+       
+        
+    }
+
     button {
-        text-decoration: none;
-        color: $body-color; // This ensures the color is inherited from the header.
-        font-size: 24px;
+        font-weight: bold;
+        font-size: 18px;
         font-weight: 700;
-        background: #2D3436;
-        border-radius: 999px;
-        padding: 8px 16px 8px 16px;
+        color: $body-color;
+        background-color: #2D3436;
+        padding: 10px 25px;
+        border-radius: 50px; 
         border: none;
+        transition: background-color 0.2s ease;
 
     }
   
-
-
-
-
 }
+// Main Hero page styles
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+  }
+  .header-text {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-weight: 800 !important;
+    color: $black-color;
+
+    h1{
+        font-size: 96px;
+        display: inline-block;
+        font-weight: 800 !important;
+        text-shadow: 0 2px 0.3px #fff;
+    }
+    .highlight{
+        color: $pink-highlight-color;
+        background-color:$green-highlight-color ;
+ 
+        padding: 5px;
+    }
+    p {
+        font-size: 64px;
+    }
+  }
+  .left-text {
+    font-weight: 400px;
+    font-size: 18px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .image-title-block {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-color:#00B894;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .right-text {
+    font-weight: 400px;
+    font-size: 18px;
+    grid-column: 5 / 7;
+    grid-row: 2 / 4;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  .small-image {
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+  .bottom-block {
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  
+    &.yellow {
+      background-color: $yellow-color;
+      grid-column: 1 / 2;
+      grid-row: 4 / 6;
+      text-align: justify;
+      .bold-text{
+        font-size: 18px;
+        font-weight: 700;
+        color: $black-color;
+      }
+      .secondary-text{
+        font-weight: 400;
+        font-size: 14px;
+        color: $black-color;
+      }
+    }
+  
+    &.pink {
+      background-color: $pink-highlight-color;
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+    }
+  
+    &.purple {
+      background-color: $purple-color;
+      grid-column: 3 / 4;
+      grid-row: 4 / 5;
+      p{
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+
+      }
+    }
+  
+    &.red {
+      background-color: $red-color;
+      grid-column: 4 / 5;
+      grid-row: 4 / 5;
+    }
+  }
+  
