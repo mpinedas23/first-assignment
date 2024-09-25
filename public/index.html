@@ -19,12 +19,15 @@
  
     <div class="container" ></div>
     <header class="d-flex align-items-center justify-content-between py-3">
+      <!--Burger-->
+      <img id="burger"  class="id="width="90" height="90" viewBox="0 0 90 90" fill="none" class="me-2" src="assets/img/icon-burger.svg" width="90" height="90">
       <!-- SVG and Grid Text -->
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <img src="assets/img/icon-layout.svg" width="90" height="90" viewBox="0 0 90 90" fill="none" class="me-2"></img>
+          <img id="grid-icon" src="assets/img/icon-layout.svg" width="90" height="90" viewBox="0 0 90 90" fill="none" class="me-2"></img>
           <span class="fw-bold fs-3">Grid</span>
       </a>
 
+      
       <!-- Navigation Links -->
       <ul class="nav justify-content-center ">
           <li><a href="#" class="nav-link px-3 " >How it works</a></li>
@@ -57,12 +60,15 @@
     
 
   <!--Main Hero section-->
+<div class="body">
+
 
     <div class="grid-container">
       
       <div class="header-text">
-        <h1>Combine <span class="highlight">fine</span> images</h1>
-        <p>To represent a product</p>
+        <h1>Combine <span class="highlight-desktop">fine</span> <span class="highlight-mobile">Cool</span> images</h1>
+        <p class="header-desktop-text">To represent a product</p>
+        <p class="header-mobile-text">To create any grid by scaling and resizing</p>
       </div>
 
       <!-- Left Text  -->
@@ -71,31 +77,43 @@
       </div>
 
       
-      <div class="image-title-block">
-        <p>Image Title</p>
+      <div class="image-title-green-block">
+        <p>Consider it done!</p>
+        <img src="assets/img/man.png" alt="grown man presenting">
       </div>
+
+
 
       <!-- Right Text  -->
       <div class="right-text">
         <p>This is multipurpose grid, it fits for portfolio, services or agency website</p>
       </div>
 
+      <!--Lilac block-->
+      <div class="middle-block-lilac">
+        <img src="assets/img/letter a.png" alt="white letter a">
+      </div>
       <!-- Small Img -->
-      <div class="small-image">
+      <div class="small-image-blue-block">
         <img src="assets/img/shoe.svg" alt="Nike blue shoe image">
       </div>
 
       <!-- Bottom  -->
       <div class="bottom-block yellow">
         <p class="bold-text">We aimed to deliver HQ templates for Figma</p>
-        <small class="secondary-text">Used by 123 people</small>
+        <p class="secondary-text">Used by 123 people</p>
+        <img src="assets/img/color sphere.png" alt="colored glassed sphere">
       </div>
       <div class="bottom-block pink">
+        <img src="assets/img/poster.png" alt="posters">
       </div>
       <div class="bottom-block purple">
-        <p>Caption</p>
+        <p>See my goal?</p>
+        <img  src="assets/img/woman.png" alt="woman licking her finger">
       </div>
-      <div class="bottom-block red"></div>
+      <div class="bottom-block red">
+        <img class="window-pic" src="assets/img/windows.png" alt="two window">
+      </div>
 
       <!-- Learn moreButton -->
       <div class="button-block">
@@ -103,7 +121,7 @@
       </div>
     </div>
 
-
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
