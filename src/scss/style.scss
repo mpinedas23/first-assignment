@@ -7,6 +7,10 @@ $red-highlight-color:#D63030;
 $green-highlight-color:#54EFC4;
 $red-color:#FF7675;
 $lilac-color: #A29BFE;
+$pink-color: #e84393;
+$blue-color: #0984E3;
+$dark-green-color:  #00B894;
+$light-grey-color:  #ADADAD;
 
 
 
@@ -170,12 +174,15 @@ header {
       z-index: 1; 
       filter: hue-rotate(50deg);
     } 
-    p{
+    .green-desktop-text{
       z-index: 2;
       color: white !important;
       font-size: 36px;
       font-weight: 700;
       text-shadow: 0 2px 0.3px black;
+    }
+    .green-mobile-text{
+      display: none;
     }
   }
 
@@ -350,6 +357,116 @@ header {
   }
 
 
+
+  //Delivering good designs 
+
+  .designs-section {
+  
+  padding: 40px 20px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 18px;
+    color: #636e72;
+  
+    margin: 0 auto 40px;
+  }
+
+  .features-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .feature-card {
+      background-color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 220px;
+    
+      flex: 1 1 calc(25% - 20px); // 4 cards layout
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        &.pink {
+          background-color: $pink-color;
+        }
+        &.blue {
+          background-color: $blue-color;
+        }
+        &.purple {
+          background-color: $purple-color;
+        }
+        &.green {
+          background-color: $dark-green-color;
+        }
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #2d3436;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        color: #636e72;
+        margin-bottom: 20px;
+      }
+
+      .learn-more-btn {
+        background-color: transparent;
+        border: 1px solid $light-grey-color;
+        border-radius: 15px;
+        padding: 10px 20px;
+        color: #6c5ce7;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #6c5ce7;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design for smaller screens
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+    
+    .feature-card {
+      max-width: 100%; // Make cards full width on mobile
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
   // mobile view
 
   @media (max-width: 768px) {
@@ -392,5 +509,84 @@ header {
       padding: 10px;
       text-shadow: 0 2px 0.3px #fff;
   }
+
+
+
+  //GRID
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    grid-template-rows: repeat(6, 0.5fr);
+    gap: 25px;
+  }
+  
+
+  .left-text {
+    grid-column: span 2;
+    
+  }
+
+  .image-title-green-block {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    grid-column: span 2;
+    .green-desktop-text{
+      display: none;
+    }
+    .green-mobile-text{
+      z-index: 2;
+      color: white !important;
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 0 2px 0.3px black;
+    }
+    img {
+  
+      text-align: center;
+      max-width: 224px;
+      max-height: 183px;
+      display: flex;
+      overflow: hidden;
+      z-index: 1;
+    }
+  }
+
+  .right-text {
+    grid-column: span 2;
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .middle-block-lilac, .small-image-blue-block, .bottom-block {
+    img {
+      width: 100%;
+    }
+  }
+
+  .bottom-block {
+    &.yellow, &.pink, &.purple, &.red {
+      p {
+        font-size: 0.9rem;
+      }
+      img {
+        
+      }
+    }
+  }
+
+  .button-block {
+    grid-column: span 2;
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
+
   }
  
