@@ -362,7 +362,7 @@ header {
 
   .designs-section {
   
-  padding: 40px 20px;
+  padding: 40px 100px;
 
   h2 {
     font-size: 32px;
@@ -396,10 +396,12 @@ header {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        margin: 0 auto 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        left: 0; 
+        top: 20px; 
+        transform: none; 
+        margin: 0; 
+        margin-bottom: 15px;
+
         
         img {
           width: 100%;
@@ -437,7 +439,7 @@ header {
       .learn-more-btn {
         background-color: transparent;
         border: 1px solid $light-grey-color;
-        border-radius: 15px;
+        border-radius: 30px;
         padding: 10px 20px;
         color: #6c5ce7;
         font-weight: 600;
@@ -454,17 +456,7 @@ header {
 }
 
 // Responsive Design for smaller screens
-@media (max-width: 768px) {
-  .features-grid {
-    flex-direction: column;
-    align-items: center;
-    
-    .feature-card {
-      max-width: 100%; // Make cards full width on mobile
-      margin-bottom: 20px;
-    }
-  }
-}
+
 
 
   // mobile view
@@ -587,6 +579,22 @@ header {
     }
   }
 
+  .features-grid {
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    .feature-card {
+      max-width: 100%; 
+      margin-bottom: 20px;
+    }
+  }
+  .purple-span{
+    color: $purple-color;
+  }
+  .emojis{
+    display: none;
+  }
 
   }
  
